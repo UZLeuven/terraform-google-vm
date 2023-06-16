@@ -92,6 +92,12 @@ variable "threads_per_core" {
   default     = null
 }
 
+variable "snapshot_policy" {
+  description = "Snapshot policy bootdisk"
+  type        = list(string)
+  default     = null
+}
+
 #######
 # disk
 #######
