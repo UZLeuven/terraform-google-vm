@@ -25,13 +25,13 @@ locals {
 
   boot_disk = [
     {
-      source_image    = var.source_image != "" ? format("${local.source_image_project}/${local.source_image}") : format("${local.source_image_project}/${local.source_image_family}")
-      disk_size_gb    = var.disk_size_gb
-      disk_type       = var.disk_type
-      disk_labels     = var.disk_labels
-      auto_delete     = var.auto_delete
-      boot            = "true"
-      snapshot_policy = var.snapshot_policy
+      source_image      = var.source_image != "" ? format("${local.source_image_project}/${local.source_image}") : format("${local.source_image_project}/${local.source_image_family}")
+      disk_size_gb      = var.disk_size_gb
+      disk_type         = var.disk_type
+      disk_labels       = var.disk_labels
+      auto_delete       = var.auto_delete
+      boot              = "true"
+      resource_policies = var.resource_policies
     },
   ]
 
